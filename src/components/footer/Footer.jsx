@@ -65,8 +65,8 @@ export const Footer = () => {
     <div className="footer_info">
       <span>© 2015-2019 Uptimia</span>
       <ul className="footer_social_list">
-        <li> <a target="_blank" href="https://twitter.com/"><FaTwitter /></a></li>
-        <li> <a target="_blank" href="https://facebook.com/"><FaFacebookF /></a></li>
+        <li><a target="_blank" rel="noreferrer noopener" href="https://twitter.com/"><FaTwitter /></a></li>
+        <li><a target="_blank" rel="noreferrer noopener" href="https://facebook.com/"><FaFacebookF /></a></li>
       </ul>
     </div>
   </footer>
