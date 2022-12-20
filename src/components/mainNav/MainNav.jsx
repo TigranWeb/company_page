@@ -11,7 +11,7 @@ const navData = [
   {
     title: "Products",
     sub: true,
-    key: "Products_main",
+    id: "Products_main",
     children: [
       {
         name: "products",
@@ -56,7 +56,7 @@ const navData = [
   {
     title: "Support",
     sub: true,
-    key: "Support",
+    id: "Support",
     children: [
       {
         name: "Support",
@@ -79,12 +79,12 @@ export const MainNav = () => {
         navData.map(data => {
           if (data.sub) {
             return (
-              <div className="mainNav_sub_container">
+              <div key={data.id} className="mainNav_sub_container">
                 <span>{data.title}</span>
-                <ul key={data.key} className="mainNav_sub">
+                <ul key={data.id} className="mainNav_sub">
                   {data.children.map(sub => {
                     return (
-                      <li key={sub.key} className="mainNav_item">
+                      <li key={sub.id} className="mainNav_item">
                         <Link to={sub.path}> {sub.name}</Link>
                       </li>
                     )
@@ -94,7 +94,7 @@ export const MainNav = () => {
             )
           } else {
             return (
-              <li key={data.key} className="mainNav_item">
+              <li key={data.id} className="mainNav_item">
                 <Link to={data.path}> {data.name}</Link>
               </li>
             )
@@ -106,10 +106,10 @@ export const MainNav = () => {
     {
       // has user
       false ?
-        <span>Lout</span>
+        <span>Log Out</span>
         : (
           <Link to="/login">
-            <span> Login</span>
+            <span> Sign In</span>
           </Link>
         )
     }
