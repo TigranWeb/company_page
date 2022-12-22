@@ -1,4 +1,5 @@
 .mainNav_container {
+  width: 100%;
   height: 80px;
   padding: 0 10px;
   display: flex;

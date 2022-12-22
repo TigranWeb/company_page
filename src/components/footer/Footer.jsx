@@ -47,12 +47,12 @@ export const Footer = () => {
   return <footer className="footer_container">
     <div className="footer_menu">
       {footerLinks.map(item => {
-        return <div className="footer_col">
+        return <div key={item.id} className="footer_col">
           <h4>{item.title}</h4>
           <ul className="footer_cal_list">
             {item.list.map(list => {
               return (
-                <li className="footer_list__item">
+                <li key={list.title} className="footer_list__item">
                   <Link to={list.path}>{list.title}</Link >
                 </li>
               )
