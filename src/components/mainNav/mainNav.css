@@ -1,25 +1,68 @@
 .mainNav_container {
   width: 100%;
   height: 80px;
-  padding: 0 10px;
+  padding: 0 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  background-color: #ccc;
+  /* justify-content: space-between; */
 }
 
-.mainNav{
-  width: 70%;
+.header_logo {
+  display: flex;
+  align-items: center;
+}
+
+.header_logo>svg {
+  font-size: 30px;
+}
+
+.header_logo span {
+  font-size: 20px;
+  margin-left: 10px;
+  color: #3D4E57;
+  font-weight: 600;
+}
+
+.header_link {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 1.71429px;
+  text-transform: uppercase;
+  color: #3D4E57;
+}
+
+.header_link:hover {
+  color: #2BB371;
+}
+
+.header_link>svg {
+  margin-left: 5px;
+}
+
+.mainNav_container a {
+  text-decoration: none;
+}
+
+.mainNav {
   height: 100%;
   margin: 0;
+  margin-left: 80px;
   display: flex;
   list-style: none;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  align-self: flex-start;
 }
 
-.mainNav_sub_container{
+.mainNav > li {
+  margin-left: 50px;
+}
+
+.mainNav_sub_container {
   position: relative;
   height: 100%;
   display: flex;
@@ -28,17 +71,17 @@
   cursor: pointer;
 }
 
-.mainNav_sub_container:hover >.mainNav_sub {
+.mainNav_sub_container:hover>.mainNav_sub {
   opacity: 1;
   height: auto;
-} 
+}
 
-.mainNav_sub{
+.mainNav_sub {
   height: 0;
+  width: 140px;
   overflow: hidden;
-  width: 120px;
   margin: 0;
-  padding: 0;
+  padding: 5px 15px 5px 15px;
   position: absolute;
   top: 100%;
   left: 0;
@@ -48,6 +91,47 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: red;
+  background-color: #3D4E57;
   list-style: none;
+}
+
+.mainNav_item {
+  padding: 5px 0;
+}
+
+.mainNav_sub > .mainNav_item{
+  width: 100%;
+}
+
+.mainNav_sub .mainNav_item a {
+  width: 100%;
+  color: #fff
+}
+
+.mainNav_sub .mainNav_item a:hover {
+  color: #2BB371
+}
+
+.header_link_sub {
+  /* display: flex; */
+  display: block;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 1.71429px;
+  text-transform: uppercase;
+  color: #3D4E57;
+}
+
+.header_link_sub:hover {
+  color: #2BB371;
+}
+
+.header_login {
+  margin-left: auto;
+}
+
+.header_login svg {
+  margin-right: 10px;
 }
