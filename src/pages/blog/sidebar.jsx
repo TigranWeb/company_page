@@ -1,13 +1,5 @@
 import { useState, useEffect } from "react";
-
-const mockCategory = [
-  "Monitoring",
-  "Social media",
-  "Analytics",
-  "Web development",
-  "Mobile",
-  "Cases"
-]
+import {blogCategories} from "../../mockData/blogs";
 
 export const BlogSidebar = (props) => {
   const { onSearch, onSelectCategory } = props
@@ -39,8 +31,9 @@ export const BlogSidebar = (props) => {
   }
 
   useEffect(() => {
+    // categories should be requested from server
     setCategoryList((prev) => {
-      return ["All categories", ...mockCategory]
+      return ["All categories", ...blogCategories]
     });
   }, [])
 
