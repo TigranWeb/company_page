@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import {blogCategories} from "../../mockData/blogs";
 
 export const BlogSidebar = (props) => {
+
   const { onSearch, onSelectCategory } = props
   const [categoryList, setCategoryList] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
@@ -37,18 +38,17 @@ export const BlogSidebar = (props) => {
     });
   }, [])
 
-  return <aside className="blog_sidebar">
+  return <aside className="blogs_sidebar">
     <input className="search_bar" onChange={handelSearch} type="search" placeholder="Search..." />
     <div>
-      <h4 className="blog_category_header">Categories</h4>
-      <div className="blog_categories">
+      <h4 className="blogs_category_header">Categories</h4>
+      <div className="blogs_categories">
         {categoryList.map(category => {
-          let activeClass = "blog_category_button";
-          console.log("AAAAAAAAAAAAAA")
+          let activeClass = "blogs_category_button";
           if (selectedCategories.length === 0 && category === "All categories") {
-            activeClass += " blog_category_button__active"
+            activeClass += " blogs_category_button__active"
           } 
-            if (selectedCategories.includes(category) && category !== "All categories") activeClass += " blog_category_button__active"
+            if (selectedCategories.includes(category) && category !== "All categories") activeClass += " blogs_category_button__active"
           return <button className={activeClass} key={category} onClick={hanselSelectCategory} name={category}>{category}</button>
         })}
       </div>
