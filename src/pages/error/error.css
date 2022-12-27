@@ -1,0 +1,29 @@
+.error-page{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.error-content{
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* box-shadow: #2DB572 0px 5px 15px; */
+  /* #2DB572 */
+}
+
+.error-content h1{
+  color: #2DB572;
+}
+.error-link{
+  color: #3D4E57;
+  text-decoration: none;
+}
+
+.error-link:hover{
+  color: #2DB572;
+}
