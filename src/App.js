@@ -7,6 +7,8 @@ function App() {
   return <RouterProvider router={router}
     fallbackElement={<FoolPageLoader/>}
   />
+        
+        // return  <FoolPageLoader /> 
 }
 
 export default App;

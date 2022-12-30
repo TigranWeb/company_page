@@ -3,8 +3,8 @@ import { Outlet } from "react-router-dom";
 import ErrorPage from "../pages/error";
 import MainNav from "../components/mainNav";
 import HomePage from "../pages/homePage";
-import Blogs from "../pages/blogs";
 import Blog from "../pages/blog";
+import Article from "../pages/article";
 import FoolPageLoader from "../pages/loader";
 
 function getBlogs() {
@@ -34,11 +34,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/blog",
-        element: <Blogs />,
+        element: <Blog />,
       },
       {
-        path: "/blog/:blogId",
-        element: <Blog />,
+        path: "/blog/:articleId",
+        element: <Article />,
       }
     ]
   }
